@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknio_website=self.webpackChunknio_website||[]).push([[7114],{7152:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/nio-website/blog/tags/hola","allTagsPath":"/nio-website/blog/tags","count":1}')}}]);

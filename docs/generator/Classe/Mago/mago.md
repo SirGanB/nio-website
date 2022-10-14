@@ -2,7 +2,7 @@
 sidebar_position: 5.9
 ---
 # Mago
-Um usuário de magia escolado, capaz de manipular as estruturas da realidade
+Um usuário de magia escolado, capaz de manipular as estruturas da realidade.
 
 ## Dado de Vida
 d6.

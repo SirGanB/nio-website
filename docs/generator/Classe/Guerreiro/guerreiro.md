@@ -2,8 +2,7 @@
 sidebar_position: 5.7
 ---
 # Guerreiro
-Um mestre do combate, perito em uma
-vasta gama de armas e armaduras.
+Um mestre do combate, perito em uma vasta gama de armas e armaduras.
 
 ## Dado de Vida
 d10.

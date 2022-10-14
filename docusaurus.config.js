@@ -10,16 +10,16 @@ const mdxMermaid = await import('mdx-mermaid')
   return {
   title: 'Niothian',
   tagline: 'Seja muito bem-vindo as Raizes do Munduz',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://SirGanB.github.io/nio-website',
+  baseUrl: '/nio-website/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'SirGanB', // Usually your GitHub org/user name.
+  projectName: 'nio-website', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -67,7 +67,7 @@ const mdxMermaid = await import('mdx-mermaid')
         items: [
           {
             type: 'docsVersionDropdown',
-            docId: 'home',
+            docId: 'intro',
             position: 'left',
             label: 'Tutorial',
           },

@@ -1,21 +1,19 @@
 ---
 sidebar_position: 5
 ---
-# Classe
+# Classes
 Capítulo 02 - Entre a Cruz e a Espada
 
 :::caution
-
-Em virtude da incongruência gerada pela palavra "Classe", ao notar que a mesma possui significados diferentes quando aplicadas à programação ou ao universo de D&D.
+"Em virtude da incongruência gerada pela palavra "Classe", ao notar que a mesma possui significados diferentes quando aplicadas à programação ou ao universo de D&D.
 
 Nós optamos por utilizar a palavra "Classe" para RPG e para a área programação utilizaremos a mesma palavra, porém, em inglês "_Class_".
-
 :::
 
-## Explanação
-O conceito de classe no D&D é um conjunto de traços que representam características que são utilizadas como base para diversas mecânicas do RPG.
-
-A Classe do Jogador determina os traços que serão utilizados na jogabilidade de uma forma geral.
+## Para o D&D
+:::note
+"A classe é a definição principal de o quê um personagem pode fazer. É mais do que uma profissão: é a vocação de um personagem. As classes modificam a forma de um personagem perceber e interagir com o mundo, bem como seu relacionamento com as outras pessoas e poderes do multiverso." (PHB, pg.19)
+:::
 
 No D&D existem originalmente doze classes, sendo elas:
 
@@ -32,52 +30,55 @@ No D&D existem originalmente doze classes, sendo elas:
 - [Paladino](/docs/generator/Classe/paladino)
 - [Patrulheiro](/docs/generator/Classe/patrulheiro)
 
-A classe atribui um arquétipo com várias mecânicas ao personagem.
+## Para a programação
+Optamos por definir a Classe como uma _Class_ Abstrata que será especializada por uma classe, seja ela um [Guerreiro](/docs/generator/Classe/guerreiro), [Mago](/docs/generator/Classe/mago), ou qualquer uma das dez classes restantes.
 
-Possui como característica uma breve apresentação sobre a classe, determina seus dados de vida, define sua árvore de habilidades, também lhe atribui duas proficiências em testes de resistência (TR), e por último mas não menos importante, lhe confere algumas proficiências em armas e
-armaduras.
-
-***
-
-## Class Diagram:
+## Diagrama de Classe
 ```mermaid
 classDiagram
-    Personagem -- Classe
-
-    Classe -- Barbaro
-    Classe -- Bardo
-    Classe -- Bruxo
-    Classe -- Clerigo
-    Classe -- Druida
-    Classe -- Feiticeiro
-    Classe -- Guerreiro
-    Classe -- Ladino
-    Classe -- Mago
-    Classe -- Monge
-    Classe -- Paladino
-    Classe -- Patrulheiro
-    <<Abstract>> Classe
-
-    
-    Subclasse -- Barbaro
-    Subclasse -- Bardo
-    Subclasse -- Bruxo
-    Subclasse -- Clerigo
-    Subclasse -- Druida
-    Subclasse -- Feiticeiro
-    Subclasse -- Guerreiro
-    Subclasse -- Ladino
-    Subclasse -- Mago
-    Subclasse -- Monge
-    Subclasse -- Paladino
-    Subclasse -- Patrulheiro
-    <<Abstract>> Subclasse
-
-    class Classe {
-        -nome : String
-        -descricao : String
-        -dadoVida : String
-        -habilidadePrimaria : String
-        -proficiencias : Proficiencia
-    }
+  Personagem *-- Classe
+  Classe <|-- ClasseExemplo
+  ClasseExemplo <|-- SubclasseExemplo
+  <<Abstract>> Classe
+  class Classe {
+    - nome : String
+    - nivel : int
+    - descricao : String
+    - dadoVida : String
+    - proficiencias : Proficiencia
+  }
+  class Personagem {
+    - classe : Classe
+  }
 ```
+
+## Código Dart
+    import 'habilidade.dart';
+
+    abstract class Classe {
+      String _nome = "";
+      String _descricao = "";
+      int _dadoVida = 0;
+      String _habilidadePrimaria = "";
+      String _proficienciaArmasArmaduras = "";
+    List<Habilidade> _habilidades = [];
+
+    String get nome => _nome;
+    set nome(String nome) => _nome = nome;
+
+    String get descricao => this._descricao;
+    set descricao(String descricao) => this._descricao = descricao;
+
+    int get dadoVida => this._dadoVida;
+    set dadoVida(int value) => this._dadoVida = value;
+
+    String get habilidadePrimaria => this._habilidadePrimaria;
+    set habilidadePrimaria(String value) => this._habilidadePrimaria = value;
+
+    String get proficienciaArmasArmaduras => this._proficienciaArmasArmaduras;
+    set proficienciaArmasArmaduras(String value) =>
+        this._proficienciaArmasArmaduras = value;
+
+    List<Habilidade> get habilidades => this._habilidades;
+    addHabilidade(habilidade) => this._habilidades.add(habilidade);
+    }

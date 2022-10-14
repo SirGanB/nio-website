@@ -1,13 +1,15 @@
 ---
 sidebar_position: 2
 ---
-# O Personagem
+# Personagem
 Capítulo 01 - O Espelho do Ego
 
 ## Explanação
 A primeira etapa para jogar uma aventura em qualquer RPG é imaginar e criar um personagem.
 
-    "O personagem é uma combinação de estatísticas de jogo, ganchos de interpretação e imaginação." (PHB p.11)
+:::note
+"O personagem é uma combinação de estatísticas de jogo, ganchos de interpretação e imaginação." (PHB p.11)
+:::
 
 Nesse processo temos uma série de coisas para fazer, como escolher:
 - [Antecedente](/docs/generator/antecedente)
@@ -23,22 +25,20 @@ Depois de concluído, o personagem serve como seu representante no jogo, seu ava
 ## Class Diagram:
 ```mermaid
 classDiagram
-PersonagemDoJogador -- Antecedente
- Antecedente -- TracosDePersonalidade
+  PersonagemDoJogador -- Antecedente
+  Antecedente -- TracosDePersonalidade
   PersonagemDoJogador -- ColClasses
-   ColClasses -- Classe
-    Classe -- Subclasse
+  ColClasses -- Classe
   PersonagemDoJogador -- ColAtributos
-   ColAtributos -- Atributo
-    Atributo -- Proficiencia
+  ColAtributos -- Atributo
+  Atributo -- Proficiencia
   PersonagemDoJogador -- ColEquipamentos
-   ColEquipamentos -- Equipamento
-    Equipamento -- ColMoedas
-     ColMoedas -- Moeda
+  ColEquipamentos -- Equipamento
+  Equipamento -- ColMoedas
+  ColMoedas -- Moeda
   PersonagemDoJogador -- Raca
-   Raca -- Subraca
 
- class PersonagemDoJogador {
+  class PersonagemDoJogador {
   - antecedente : Antecedente
   - bonusProficiencia : int
   - classe : Classe

@@ -33,6 +33,10 @@ const mdxMermaid = await import('mdx-mermaid')
     [
       'classic',
       ({
+          googleAnalytics: {
+            trackingID: 'G-40955473PT',
+            anonymizeIP: true,
+          },
         docs: {
           remarkPlugins: [mdxMermaid.default],
           sidebarPath: require.resolve('./sidebars.js'),

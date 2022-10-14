@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 # Raça
-Capítulo 03 - Espera ai, mas quem é você!?
+Capítulo 03 - "Wait, who are you?"
 
 ## Explanação
 Cada personagem pertence a uma raça, uma das muitas espécies humanoides inteligentes do mundo de D&D.
@@ -33,7 +33,7 @@ A raça de um personagem garante certos traços raciais, tais como:
     - Perícias
 - Capacidade de usar magias menores ~~em alguns casos~~
 
-:::caution
+:::info
 Alguns desses traços podem se encaixam com certas classes, fazer isso pode criar combinações bem divertidas, então lembre-se de lê-los com muita atenção!
 :::
 
@@ -44,27 +44,15 @@ Alguns desses traços podem se encaixam com certas classes, fazer isso pode cria
 classDiagram
     PersonagemDoJogador -- Raca
     Raca -- Anoes
-    Raca -- Draconatos
     Raca -- Elfos
-    Raca -- Gnomos
-    Raca -- Halflings
     Raca -- Humanos
-    Raca -- MeioElfos
-    Raca -- MeioOrcs
-    Raca -- Tieflings
+    <<Abstract>> Raca
 
     Subraca -- Anoes
-    Subraca -- Draconatos
     Subraca -- Elfos
-    Subraca -- Gnomos
-    Subraca -- Halflings
     Subraca -- Humanos
-    Subraca -- MeioElfos
-    Subraca -- MeioOrcs
-    Subraca -- Tieflings
+    <<Abstract>> Subraca
 
-    
-    <<Abstract>> Raca
     class Raca {
         - nome : String
         - proficiencia : String
@@ -72,5 +60,4 @@ classDiagram
         - tendencia : String
         - tipo : String
     }
-    <<Abstract>> Subraca
 ```

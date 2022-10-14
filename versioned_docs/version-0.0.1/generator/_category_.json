@@ -1,0 +1,8 @@
+{
+  "label": "[Gene]rator",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Um otimizador do processo criativo através de um gerador de antecedentes."
+  }
+}

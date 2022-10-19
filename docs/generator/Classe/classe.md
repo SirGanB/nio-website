@@ -7,7 +7,7 @@ Capítulo 02 - Entre a Cruz e a Espada
 :::caution
 "Em virtude da incongruência gerada pela palavra "Classe", ao notar que a mesma possui significados diferentes quando aplicadas à programação ou ao universo de D&D.
 
-Nós optamos por utilizar a palavra "Classe" para RPG e para a área programação utilizaremos a mesma palavra, porém, em inglês "_Class_".
+Nós optamos por utilizar a palavra "Classe" para RPG e para a área programação utilizaremos "Vocação".
 :::
 
 ## Para o D&D
@@ -31,7 +31,7 @@ No D&D existem originalmente doze classes, sendo elas:
 - [Patrulheiro](/docs/generator/Classe/patrulheiro)
 
 ## Para a programação
-Optamos por definir a Classe como uma _Class_ Abstrata que será especializada por uma classe, seja ela um [Guerreiro](/docs/generator/Classe/guerreiro), [Mago](/docs/generator/Classe/mago), ou qualquer uma das dez classes restantes.
+Optamos por definir a Vocação, como uma Classe Abstrata que será especializada por uma classe, seja ela um [Guerreiro](/docs/generator/Classe/guerreiro), [Mago](/docs/generator/Classe/mago), ou qualquer uma das dez classes restantes.
 
 ## Diagrama de Classe
 ```mermaid

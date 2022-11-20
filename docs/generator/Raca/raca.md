@@ -42,18 +42,15 @@ Alguns desses traços podem se encaixam com certas classes, fazer isso pode cria
 ## Class Diagram:
 ```mermaid
 classDiagram
-    PersonagemDoJogador -- Raca
-    Raca -- Anoes
-    Raca -- Elfos
-    Raca -- Humanos
+    PersonagemJogador o-- Raca
+        Raca <|-- Anoes
+            Anoes <|-- AnoesMontanha
+
     <<Abstract>> Raca
-
-    Subraca -- Anoes
-    Subraca -- Elfos
-    Subraca -- Humanos
-    <<Abstract>> Subraca
-
     class Raca {
+        - deslocamento : float
+        - idade : int
+        - idiomas : String[]
         - nome : String
         - proficiencia : String
         - sentidosEspeciais : String

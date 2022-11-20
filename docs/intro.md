@@ -5,7 +5,7 @@ sidebar_position: 0
 Bem-vindo Devolta à Casa
 
 ## Introdução
-Niothian é um projeto que se assemelha a uma àrvore, ramificando-se em diversos outros projetos menores. Com objetivo principal de desenvolver uma estória que possa ser vislumbrada como um todo, desde a criação até o fim de tudo.
+Niothian é um projeto que se assemelha a uma àrvore, ramificando-se em diversos outros projetos menores. Com objetivo principal de desenvolver uma estória que possa ser vislumbrada como um todo, desde a criação até o fim deste univérso.
 
 ## Projetos Atuais
 ### About Munduz
@@ -21,3 +21,4 @@ Niothian é um projeto que se assemelha a uma àrvore, ramificando-se em diverso
 
 ### About Munduz
 Mesa de RPG que utiliza o sistema de D&D 5e, para criar seus contos e crônicas a respeito do universo Niothian.
+

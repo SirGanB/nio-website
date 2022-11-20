@@ -25,20 +25,19 @@ Depois de concluído, o personagem serve como seu representante no jogo, seu ava
 ## Class Diagram:
 ```mermaid
 classDiagram
-  PersonagemDoJogador -- Antecedente
-  Antecedente -- TracosDePersonalidade
-  PersonagemDoJogador -- ColClasses
-  ColClasses -- Classe
-  PersonagemDoJogador -- ColAtributos
-  ColAtributos -- Atributo
-  Atributo -- Proficiencia
-  PersonagemDoJogador -- ColEquipamentos
+  Personagem -- Antecedente
+  Antecedente <|-- Exemplo
+  Personagem -- Classe
+  Classe <|-- Arquetipo
+  Personagem -- ValorAtributo
+  ValorAtributo -- Proficiencia
+  Personagem -- ColEquipamentos
   ColEquipamentos -- Equipamento
   Equipamento -- ColMoedas
   ColMoedas -- Moeda
-  PersonagemDoJogador -- Raca
+  Personagem -- Raca
 
-  class PersonagemDoJogador {
+  class Personagem {
   - antecedente : Antecedente
   - bonusProficiencia : int
   - classe : Classe

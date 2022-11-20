@@ -34,10 +34,17 @@ const mdxMermaid = await import('mdx-mermaid')
       'classic',
       ({
           googleAnalytics: {
-            trackingID: 'G-40955473PT',
+            trackingID: 'UA-239533078-1',
             anonymizeIP: true,
           },
         docs: {
+          lastVersion: 'current',
+        versions: {
+          current: {
+            label: 'Atual',
+            path: '',
+          },
+        },
           remarkPlugins: [mdxMermaid.default],
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
